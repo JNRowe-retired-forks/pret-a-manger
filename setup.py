@@ -8,7 +8,7 @@ readme = open('README').read()
 long_description = readme
 
 setup(
-    name='Pret',
+    name='pret-a-manger',
     version=get_version('short'),
     description='Pret is a simple command line tool to list the menu of pret and organizing order.',
     long_description=long_description,
@@ -24,8 +24,10 @@ setup(
     },
     requires=[
         'BeautifulSoup',
+        'termcolor'
     ],
     install_requires=[
         'BeautifulSoup',
+        'termcolor',
     ]
 )
