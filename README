@@ -1,1 +1,3 @@
-Command line tool to list the menu and organize order from pret.com (pret a manger)
+Command line tool to list the menu and organize order on your local network from www.pret.com (pret a manger)
+
+After the install, you can use the command line 'pret' to start to make your order or to collect order with somebody on your local network.
