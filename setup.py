@@ -12,7 +12,7 @@ setup(
     description='Pret-a-manger is a simple command line tool to list the menu of pret and organizing order.',
     long_description=long_description,
     author='Rachid Belaid',
-    author_email='dev@ironbraces.com',
+    author_email='pret@ironbraces.com',
     url='https://github.com/rachid/pret-a-manger',
     packages=find_packages(),
     license = "MIT",
