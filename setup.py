@@ -24,10 +24,12 @@ setup(
     },
     requires=[
         'BeautifulSoup',
-        'termcolor'
+        'termcolor',
+        'xmlrpclib',
     ],
     install_requires=[
         'BeautifulSoup',
         'termcolor',
+        'xmlrpclib'
     ]
 )
