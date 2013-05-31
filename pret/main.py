@@ -5,23 +5,23 @@ import time
 __author__ = 'Rachid Belaid'
 
 import urllib2
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from termcolor import colored
 
 
 def display_menu(kcal):
     page = urllib2.urlopen("http://pret.com/menu/")
-    soup = BeautifulSoup(page)
-    product_categories = soup.findAll('div', {"class": "product_category"})
+    soup = BeautifulSoup(page, "html.parser")
+    product_categories = soup.find_all('div', {"class": "product_category"})
     menu = []
     for product_category in product_categories:
         category = product_category.img['alt']
-        foods = product_category.findAll('a')
+        foods = product_category.find_all('a')
         for food in foods:
             if kcal:
                 page = urllib2.urlopen('http://pret.com/%s' % food['href'])
-                food_page = BeautifulSoup(page)
-                food_kcal = food_page.findAll('td', {"class": "nutr_value"})[0].text
+                food_page = BeautifulSoup(page, "html.parser")
+                food_kcal = food_page.find_all('td', {"class": "nutr_value"})[0].text
                 food_tuple = (food.text, food_kcal)
             else:
                 food_tuple = (food.text,)
